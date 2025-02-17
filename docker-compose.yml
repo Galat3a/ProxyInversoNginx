@@ -1,0 +1,21 @@
+version: "3"
+services:
+  proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile_Proxy
+    ports:
+      - "80:80"
+    depends_on:
+      - web1
+
+  web1:
+    build:
+      context: .
+      dockerfile: Dockerfile_Web1
+    ports:
+      - "8080:8080"
+    networks:
+      default:
+        aliases:
+          - w1

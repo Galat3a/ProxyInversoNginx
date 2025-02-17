@@ -121,4 +121,33 @@ add_header X-frien proxy_example;
 ```bash 
 add_header Host w1.example.test;
 ```
- <img src="./capturas/19.png">
+
+
+ # Despliegue con Docker
+
+1. Configuracion de un contenedor para proxy basado en Nginzx que redirige las peticiones hacia el servidor web, llamado Dockerfile_Proxy
+
+ <img src="./capturas/20.png">
+
+2. Configuracion de un contenedor para Wev1 basado en Nginx para servir el contenido HTML que hay en Dockerfile_Web1
+
+ <img src="./capturas/21.png">
+
+3.  Define ambos contenedores como servicios y asigna alias de red, permitiendo que el proxy pueda acceder al contenedor web1 mediante el nombre "w1".
+
+ <img src="./capturas/22.png">
+
+Para hacer el despliegue, basta con ejecutar en la carpeta raiz del proyecto el siguiente comando:
+
+```bash 
+
+docker-compose up --build
+
+```
+<img src="./capturas/22_2.pg">
+
+<img src="./capturas/23.png">
+
+<img src="./capturas/24.png">
+
+<img src="./capturas/25.png">

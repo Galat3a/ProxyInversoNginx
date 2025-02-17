@@ -1,0 +1,10 @@
+FROM nginx:alpine
+
+RUN mkdir -p /var/www/web1/html
+
+COPY doc/web1/web1.conf /etc/nginx/conf.d/default.conf
+
+COPY doc/web1/index.html /var/www/web1/html/index.html
+
+EXPOSE 8080
+CMD ["nginx", "-g", "daemon off;"]
