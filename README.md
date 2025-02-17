@@ -110,7 +110,7 @@ vagrant ssh -c "sudo tail /var/log/nginx/access.log" proxy
 Entramos en vagrant ssh proxy, y en sites-enabled/default añadimos:
 
 ```bash 
-add_header X-friend acarmar;
+add_header X-frien proxy_example;
 ```
  <img src="./capturas/17.png">
 
