@@ -114,15 +114,18 @@ add_header X-frien proxy_example;
 ```
  <img src="./capturas/17.png">
 
- # Añadir cabeceras al servidor web
+##  Añadir cabeceras al servidor web
 
  Entramos en vagrant ssh web, y en sites-enabled/w1 añadimos:
 
 ```bash 
 add_header Host w1.example.test;
 ```
+<img src="./capturas/18.png">
 
-##  2 Despliegue con Docker
+<img src="./capturas/19.png">
+
+#  2 Despliegue con Docker
 
 1. Configuracion de un contenedor para proxy basado en Nginzx que redirige las peticiones hacia el servidor web, llamado Dockerfile_Proxy
 
