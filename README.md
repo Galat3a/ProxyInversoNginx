@@ -1,6 +1,6 @@
-## Proxy Inverso
+# Proxy Inverso
 
-# Vagrantfile
+## Vagrantfile
 
 ```bash 
 
@@ -59,7 +59,7 @@ Instalamos curl y lo probamos:
 <img src="./capturas/7.png">
 
 
-# Configuración del proxy
+##  Configuración del proxy
 
 Consulatamos la ip:
 
@@ -105,7 +105,7 @@ vagrant ssh -c "sudo tail /var/log/nginx/access.log" proxy
 
 <img src="./capturas/15.png">
 
-# Añadir cabeceras al proxy inverso
+##  Añadir cabeceras al proxy inverso
 
 Entramos en vagrant ssh proxy, y en sites-enabled/default añadimos:
 
@@ -122,8 +122,7 @@ add_header X-frien proxy_example;
 add_header Host w1.example.test;
 ```
 
-
- # 2 Despliegue con Docker
+##  2 Despliegue con Docker
 
 1. Configuracion de un contenedor para proxy basado en Nginzx que redirige las peticiones hacia el servidor web, llamado Dockerfile_Proxy
 
