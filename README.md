@@ -123,7 +123,7 @@ add_header Host w1.example.test;
 ```
 
 
- # Despliegue con Docker
+ # 2 Despliegue con Docker
 
 1. Configuracion de un contenedor para proxy basado en Nginzx que redirige las peticiones hacia el servidor web, llamado Dockerfile_Proxy
 
@@ -137,13 +137,16 @@ add_header Host w1.example.test;
 
  <img src="./capturas/22.png">
 
-Para hacer el despliegue, basta con ejecutar en la carpeta raiz del proyecto el siguiente comando:
+Para hacer el despliegue, basta con ejecutar en la carpeta raiz del proyecto el siguiente comando, el cual ejecutara el archivo docker-compose.yml:
 
 ```bash 
 
 docker-compose up --build
 
 ```
+
+En la app Docker aparecera nuestro contenedor entrega:
+
 <img src="./capturas/22_2.pg">
 
 <img src="./capturas/23.png">
